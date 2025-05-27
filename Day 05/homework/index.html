@@ -1,0 +1,92 @@
+<!-- 1)შექმენით web-site თვისუფალ თემაზე , შეზღუდულები არ ხართ , გამოიყენეთ ყველაფერი რაც ვისწავლეთ და რაც არ გვისწავლია , დამატებით მასალა შეგიძლიათ მოიძიოთ ინტერნეტიდან ამოვარჩევ 1 პროექტს ვისიც ყველაზე მეტად მომეწონება და დავუწერ შესაბამის აურას <3  -->
+
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ჩემი საყვარელი მანქანები</title>
+<style>
+body {
+font-family: "Segoe UI", sans-serif;
+background-color: #f4f4f4;
+color: #333;
+padding: 20px;
+transition: background-color 0.5s;
+}
+ h1 {
+text-align: center;
+color: #444;
+}
+.cars {
+display: flex;
+gap: 20px;
+flex-wrap: wrap;
+justify-content: center;
+}
+.card {
+ background-color: white;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+width: 250px;
+}
+.card img {
+width: 100%;
+border-radius: 8px;
+}
+.card h3 {
+margin-top: 10px;
+}
+.change-bg-btn {
+margin: 30px auto;
+display: block;
+padding: 10px 20px;
+font-size: 16px;
+border: none;
+background-color: #007acc;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+}
+.change-bg-btn:hover {
+background-color: #005fa3;
+}
+</style>
+</head>
+<body>
+<h1>ჩემი საყვარელი მანქანები</h1>
+
+<div class="cars">
+<div class="card">
+<img src="https://issimi-vehicles-cdn.b-cdn.net/publicamlvehiclemanagement/VehicleDetails/228/1.jpg?width=3840&quality=75" alt="Audi RS7">
+<h3>Audi RS7</h3>
+<p>სუპერ სწრაფი და ელეგანტური სედანი, რომელიც აერთიანებს კომფორტს და სპორტულობას.</p>
+</div>
+<div class="card">
+<img src="https://cdn.motor1.com/images/mgl/YAGV6j/s1/bmw-m5-by-manhart-mh5-900.jpg" alt="BMW M5">
+<h3>BMW M5</h3>
+<p>ძალიან ძლიერი სედანი სპორტული მახასიათებლებით.</p>
+</div>
+<div class="card">
+<img src="https://th.bing.com/th/id/OIP.x85MPmCqRJ9_LIbMd8AhAgHaEK?rs=1&pid=ImgDetMain" alt="Ford Mustang">
+<h3>Ford Mustang</h3>
+<p>ამერიკული კლასიკა, ძლიერი ძრავით და გამორჩეული დიზაინით.</p>
+</div>
+</div>
+
+<button class="change-bg-btn" onclick="changeBackground()">შეცვალე ფონი</button>
+
+<script>
+function changeBackground() {
+const colors = ['#f4f4f4', '#e0f7fa', '#fff3e0', '#fce4ec', '#e8f5e9'];
+const currentColor = document.body.style.backgroundColor;
+let newColor = colors[Math.floor(Math.random() * colors.length)];
+while (newColor === currentColor) {
+newColor = colors[Math.floor(Math.random() * colors.length)];
+}
+document.body.style.backgroundColor = newColor;
+}
+</script>
+</body>
+</html>
